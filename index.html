@@ -1,40 +1,9 @@
 <!DOCTYPE html>
 <html>
  
-<head>
-    <title>TTCA</title>
-    <link rel="stylesheet"
-          href="style.css">
-	<script src="jquery/jquery-3.5.1.min.js"></script>
-</head>
-
-<script type="text/javascript">
-function check() {
-	console.log("start checking");
-	
-	var w_user_id = document.getElementById("user_id").value;
-	var w_password = document.getElementById("password").value;
-
-    console.log(w_user_id, w_password);
-
-    if (w_user_id == 'AD00001' && w_password == '123456') {
-        window.open('MenuAdmin.html');
-    } else if ((w_user_id == 'S00001' || w_user_id == 'A00001' || w_user_id == 'P00001') && w_password == '123456') {
-        window.open('MenuUsers.html');
-    } else if (w_user_id == 'ST00001' && w_password == '123456') {
-        window.open('MenuStaff.html');
-    } else {
-        alert("Login id is not found!! or password is wrong!");
-        $("#errMsg").html("<span style='color: red'>Login id is not found!! or password is wrong!!</span>").show().fadeOut(4000);
-    }
-
-}
-</script>
-
 <body>
     <div class="main">
-		<img src="images/tc.png" alt="Tsung Tsin Christian Academy ">
-        <h1>TTCA Online booking system</h1>
+        <h1>Online booking system</h1>
         <h3>Enter your login credentials</h3>
         <form action="">
             <label for="first">
@@ -55,8 +24,8 @@ function check() {
  
             <div class="wrap">
                 <button type="submit"
-						id="submit"
-						name="submit"
+			id="submit"
+			name="submit"
                         onclick="check()">
                     Submit
                 </button>
